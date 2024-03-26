@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
+import { useState } from "react";
 
 function PokemonCard({ pokemon }) {
+  
+  
+  
   return (
     <>
       <figure>
@@ -12,6 +16,8 @@ function PokemonCard({ pokemon }) {
         <figcaption>{pokemon.name}</figcaption>
       </figure>
     </>
+
+
   );
 }
 
