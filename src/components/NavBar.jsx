@@ -1,16 +1,19 @@
-function NavBar ({last, next}) {
+function NavBar ({pokemons, afficherPokemon}) {
+
+
 
 return (
  <nav>
-      <button className="btnPrecedent"onClick={last}>Précédent</button>
-      <button className="btnSuivant"onClick={next}>Suivant</button>
+     {pokemons.map((pokemon, index) => (
+        <button key={pokemon.name} onClick={() => {afficherPokemon(index)}}>
+          {pokemon.name}
+        </button>
+      ))}
 </nav>
 ) 
 
 
 }
-
-
 
 
 export default NavBar
