@@ -1,8 +1,22 @@
 import PokemonCard from "./components/PokemonCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 
 function App() {
+  useEffect(
+    () =>  {
+      alert("hello pokemon trainer 🤓")
+    }, 
+    []
+ );
+
+ //  const [prevItems, setPrevItems] = useState(items);
+  // if (items !== prevItems) {
+  //   setPrevItems(items);
+  //   setSelection(null);
+  // } }
+  // // ...
+
   const pokemonList = [
     {
       name: "bulbasaur",
@@ -32,6 +46,7 @@ function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
   const afficherPokemon = (index) => {
     setPokemonIndex(index);
+    if (index==3) {alert("pika pikachu !!!")}
   };
 
 
